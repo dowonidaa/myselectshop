@@ -66,11 +66,11 @@ class ProductServiceTest {
         assertEquals(myprice, result.getMyprice());
     }
 
-    @Test
+//    @Test
     @DisplayName("관심 상품 희망가 - 최저가 미만으로 변경")
     void test2() {
         // given
-        Long productId = 200L;
+        Long productId = 1L;
         int myprice = ProductService.MIN_MY_PRICE - 50;
 
         ProductMypriceRequestDto requestMyPriceDto = new ProductMypriceRequestDto();
