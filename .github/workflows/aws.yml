@@ -67,7 +67,9 @@ jobs:
     - name: Create application.yml from GitHub Secrets
       run: |
         echo "${{ secrets.APPLICATION_YML }}" > src/main/resources/application.properties
-
+    - name: Verify application.properties creation
+      run: |
+        cat src/main/resources/application.properties
 
     - name: Build, tag, and push image to Amazon ECR
       id: build-image
