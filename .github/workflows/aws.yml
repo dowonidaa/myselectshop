@@ -64,6 +64,11 @@ jobs:
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
 
+    - name: Create application.yml from GitHub Secrets
+      run: |
+        echo "${{ secrets.APPLICATION_YML }}" > src/main/resources/application.yml
+
+
     - name: Build, tag, and push image to Amazon ECR
       id: build-image
       env:
