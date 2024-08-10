@@ -64,9 +64,9 @@ jobs:
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
 
-    - name: Create application.yml from GitHub Secrets
+    - name: Create application.properties from GitHub Secrets
       run: |
-        echo "${{ secrets.APPLICATION_YML }}" > src/main/resources/application.properties
+        echo "${{ secrets.APPLICATION_PROPERTIES }}" > src/main/resources/application.properties
     - name: Verify application.properties creation
       run: |
         cat src/main/resources/application.properties
