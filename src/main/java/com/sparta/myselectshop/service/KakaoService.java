@@ -67,7 +67,7 @@ public class KakaoService {
         LinkedMultiValueMap<String, String> body = new LinkedMultiValueMap<>();
         body.add("grant_type", "authorization_code");
         body.add("client_id", "d38e1aecd1e303c91be0920dfda08b0e");
-        body.add("redirect_uri", "https://myselectshop-lb-639034106.ap-northeast-2.elb.amazonaws.com/api/user/kakao/callback");
+        body.add("redirect_uri", "http://myselectshop-lb-639034106.ap-northeast-2.elb.amazonaws.com/api/user/kakao/callback");
         body.add("code", code);
 
         RequestEntity<MultiValueMap<String, String>> requestEntity = RequestEntity
