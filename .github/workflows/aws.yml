@@ -67,11 +67,11 @@ jobs:
     - name: Create application.properties from GitHub Secrets
       run: |
         echo "${{ secrets.APPLICATION_PROPERTIES }}" > src/main/resources/application.properties
-        ls -a
+
     - name: Verify application.properties creation
       run: |
         cat src/main/resources/application.properties
-
+        ls -a
     - name: Build, tag, and push image to Amazon ECR
       id: build-image
       env:
