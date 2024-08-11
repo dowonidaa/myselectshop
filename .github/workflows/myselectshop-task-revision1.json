@@ -1,10 +1,10 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:061039778974:task-definition/myselectshop-task:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:061039778974:task-definition/myselectshop-task:2",
     "containerDefinitions": [
         {
             "name": "myselectshop-container",
             "image": "061039778974.dkr.ecr.ap-northeast-2.amazonaws.com/myselectshop",
-            "cpu": 0,
+            "cpu": 1024,
             "portMappings": [
                 {
                     "name": "myselectshop-container-8080-tcp",
@@ -36,7 +36,7 @@
     "family": "myselectshop-task",
     "executionRoleArn": "arn:aws:iam::061039778974:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 2,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -79,7 +79,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-08-10T15:37:15.126Z",
+    "registeredAt": "2024-08-11T03:20:04.854Z",
     "registeredBy": "arn:aws:iam::061039778974:root",
     "tags": []
 }
