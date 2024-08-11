@@ -35,8 +35,8 @@ env:
   ECR_REPOSITORY: myselectshop           # set this to your Amazon ECR repository name
   ECS_SERVICE: myselectshop-service                 # set this to your Amazon ECS service name
   ECS_CLUSTER: myselectshop-cluster                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: .gihub/workflows/myselectshop-task-revision1.json # set this to the path to your Amazon ECS task definition
-  # file, e.g. .aws/task-definition.json
+  ECS_TASK_DEFINITION: .github/workflows/myselectshop-task-revision1.json # set this to the path to your Amazon ECS task definition
+                                                      # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: myselectshop-container           # set this to the name of the container in the
   # containerDefinitions section of your task definition
 
